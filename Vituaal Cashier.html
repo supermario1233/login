@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Cashier</title>
+  <link rel="icon" type="image/x.icon" href="icon.png">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('BackgroundImage3.jpg'); /* Replace 'background_image.jpg' with the path to your desired background image */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+		opacity: 10.5;
+    }
+    #cashier-container {
+        background-color: rgba(255, 255, 255, 0.8); /* Adjust the transparency as needed */
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #item-list {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<header>
+
+</header>
+<body>
+    <div id="cashier-container">
+        <h1>Virtual Cashier</h1>
+        <div id="item-list">
+            <label for="item">Item:</label>
+            <input type="text" id="item">
+            <label for="price">Price:</label>
+            <input type="number" id="price">
+            <button onclick="addItem()">Add Item</button>
+        </div>
+        <div id="receipt">
+            <h2>Receipt</h2>
+            <ul id="item-display"></ul>
+            <p>Total: PHP<span id="total">0.00</span></p>
+        </div>
+    </div>
+
+    <script>
+        let totalAmount = 0;
+
+        function addItem() {
+            const itemInput = document.getElementById('item');
+            const priceInput = document.getElementById('price');
+
+            const item = itemInput.value;
+            const price = parseFloat(priceInput.value);
+
+            if (!item || isNaN(price) || price <= 0) {
+                alert("Please enter valid item and price.");
+                return;
+            }
+
+            totalAmount += price;
+
+            const itemList = document.getElementById('item-display');
+            const newItem = document.createElement('li');
+            newItem.textContent = `${item}: $${price.toFixed(2)}`;
+            itemList.appendChild(newItem);
+
+            const totalDisplay = document.getElementById('total');
+            totalDisplay.textContent = totalAmount.toFixed(2);
+
+            itemInput.value = '';
+            priceInput.value = '';
+        }
+    </script>
+</body>
+</html>

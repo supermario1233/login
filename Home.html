@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url('BackgroundImage.AVIF');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .menu-items-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+	
+    .menu-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+    }
+    .menu-item img {
+      width: 200px;
+      height: 200px;
+      border-radius: 8px;
+    }
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+	.container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px; /* Adjust as needed */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.about-container {
+  padding: 10px;
+}
+
+.about-container img {
+  display: block;
+  margin: 0 auto 20px; /* Add margin below the image */
+}
+
+/* Adjustments to your existing styles */
+
+body {
+  background-image: url('BackgroundImage.AVIF');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0; /* Add this to remove default body margin */
+}
+
+header {
+  color: white;
+  text-align: center;
+  font-size: 1em;
+}
+
+footer {
+  background-color: #d4d5d6;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  color-text: white;
+}
+
+header h1 img {
+  width: 100px; /* Adjust the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add space between the logo and text */
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 50px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+div ul, li {
+  display: inline;
+  margin-right: 5px;
+  font-size: 100%;
+}
+
+ #shoppingcart{
+position: relative;
+top:-180px;
+margin-left: 1450px;
+font-size:1.3em;
+}
+
+    .contact {
+	  color: white;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+	  text-align: center;
+    }
+
+    .contact:last-child {
+      border-bottom: none; /* Remove border from last contact */
+    }
+
+    .contact h3 {
+      margin-top: 0;
+	  }
+	  .contact img {
+      width: 30px; /* Resize the contact icons */
+      height: 30px; /* Resize the contact icons */
+    }
+	
+  </style>
+</head>
+<body>
+  <header>
+   <h1><img src="icon.png" alt="Coffee Shop"></h1>
+    <nav>
+      <ul>
+	    <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+		<li><a href="login.html">Sign-out</a></li>
+	<div id="shoppingcart"><a href="Virtual Cashier.html">&#128722;</a></div>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="menu">
+    <h2>Menu</h2>
+    <div class="menu-items-container">
+      <div class="menu-item">
+        <img src="Espresso.jpg" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>A strong black coffee made by forcing steam through ground coffee beans.</p>
+        <p>PHP 350.00</p>
+        <button>Add to Cart</button>
+      </div>
+      
+      <div class="menu-item">
+        <img src="Latte.jpg" alt="Latte">
+        <h3>Latte</h3>
+        <p>A coffee drink made with espresso and steamed milk.</p>
+        <p>PHP 250.00</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="Capuccino.jpg" alt="Capuccino">
+        <h3>Capuccino</h3>
+        <p>A coffee drink topped with frothed milk.</p>
+        <p>PHP 300.00</p>
+        <button>Add to Cart</button>
+      </div>
+      
+      <div class="menu-item">
+        <img src="Americano.jpg" alt="Americano">
+        <h3>Americano</h3>
+        <p>A coffee drink made with espresso and hot water.</p>
+        <p>PHP 450.00</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="Mocha.png" alt="Mocha">
+        <h3>Mocha</h3>
+        <p>A coffee drink made with espresso, steamed milk, and chocolate syrup.</p>
+        <p>PHP 150.00</p>
+			<button>Add to Cart</button>
+      </div>
+      
+      <div class="menu-item">
+        <img src="Machiatto.WEBP" alt="Macchiato">
+        <h3>Macchiato</h3>
+        <p>A coffee drink made with espresso and a small amount of milk.</p>
+        <p>PHP 250.00</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Add more menu items here -->
+      <div class="menu-item">
+        <img src="FlatWhite.jpg" alt="Flat White">
+        <h3>Flat White</h3>
+        <p>A coffee drink made with espresso and velvety steamed milk.</p>
+        <p>PHP 400.00</p>
+        <button>Add to Cart</button>
+      </div>
+      
+      <div class="menu-item">
+        <img src="Affogato.WEBP" alt="Affogato">
+        <h3>Affogato</h3>
+        <p>A dessert consisting of a scoop of vanilla gelato "drowned" in a shot of hot espresso.</p>
+        <p>PHP 200.00</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="IcedCoffee.WEBP" alt="Iced Coffee">
+        <h3>Iced Coffee</h3>
+        <p>A chilled coffee beverage served over ice.</p>
+        <p>PHP 100.00</p>
+        <button>Add to Cart</button>
+      </div>
+      
+      <div class="menu-item">
+        <img src="IrishCoffee.jpg" alt="Irish Coffee">
+        <h3>Irish Coffee</h3>
+        <p>A cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with cream.</p>
+        <p>PHP 250.00</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  
+ <section id="about">
+ <h2>About Us</h2>
+  
+    <div class="about-container">
+	 <img src="aboutus.png" width="1600" height="400" alt="Coffee Shop">
+     
+      
+    </div>
+  </div>
+</section>
+  
+  <section id="contact">
+  
+    <section id="contacts">
+      <h2>Contacts</h2>
+      <div class="contact">
+	   <img src="male_icon.WEBP" alt="Male Icon">
+        <h3>Bryan Caugma</h3>
+        <p>Email: caugmabryan@gmail.com</p>
+        <p>Phone: 948-526-0571</p>
+      </div>
+      <div class="contact">
+	  <img src="female_icon.png" alt="Male Icon">
+        <h3>MarieCris Pagaling</h3>
+        <p>Email: mariecris@gmail.com</p>
+        <p>Phone: 987-654-3210</p>
+      </div>
+      <!-- Add more contacts here -->
+    </section>
+  </div>
+  </section>
+  
+  <footer>
+    <ul class="social-icons">
+      <li><a href="#"><img src="Facebook.webp" alt="Facebook"></a></li>
+      <li><a href="#"><img src="Twitter.png" alt="Twitter"></a></li>
+      <li><a href="#"><img src="Instagram.jpg" alt="Instagram"></a></li>
+	 
+    </ul>
+    <p>&copy; 2024 Coffee Shop</p>
+	<p>Developed by: BRYAN R. CAUGMA</p>
+  </footer>
+</body>
+</html>
